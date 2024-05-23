@@ -2,7 +2,7 @@
 
 [Demo Link](https://book-data-dashboard.vercel.app)
 
-//The data takes few seconds to be displayed in the app.
+//The data takes a few seconds to be displayed in the app.
 
 ## About
 
