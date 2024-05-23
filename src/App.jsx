@@ -70,7 +70,7 @@ function App() {
       <div className="flex flex-col justify-between w-full md:w-[85%] gap-8">
         <h1 className="text-2xl font-bold text-center">ADMIN DASHBOARD</h1>
         <div className="flex justify-between items-center mb-4">
-          <div>
+          <div className="flex flex-col md:flex-row justify-center items-center">
             Show
             <select
               value={pageSize}
@@ -86,27 +86,29 @@ function App() {
           <div className="flex items-center">
             <button
               onClick={toggleSortDirection}
-              className="mx-2 px-4 py-2 border border-gray-300 rounded bg-blue-500 text-white hover:bg-blue-600 transition-colors"
+              className="flex max-w-35 mx-2 px-4 py-2 border border-gray-300 rounded bg-blue-500 text-white hover:bg-blue-600 transition-colors"
             >
               Sort {sortConfig.direction === "ascending" ? "▲" : "▼"}
             </button>
-            <button
-              onClick={() => handlePageChange(currentPage - 1)}
-              disabled={currentPage === 1}
-              className="mx-2 px-4 py-2 border border-gray-300 rounded bg-gray-200 hover:bg-gray-300 transition-colors disabled:opacity-50"
-            >
-              Previous
-            </button>
-            <span>
-              Page {currentPage} of {totalPages}
-            </span>
-            <button
-              onClick={() => handlePageChange(currentPage + 1)}
-              disabled={currentPage === totalPages}
-              className="mx-2 px-4 py-2 border border-gray-300 rounded bg-gray-200 hover:bg-gray-300 transition-colors disabled:opacity-50"
-            >
-              Next
-            </button>
+            <div className="flex flex-col md:flex-row justify-center items-center">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="mx-2 px-4 py-2 border border-gray-300 rounded bg-gray-200 hover:bg-gray-300 transition-colors disabled:opacity-50"
+              >
+                Previous
+              </button>
+              <span>
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="mx-2 px-4 py-2 border border-gray-300 rounded bg-gray-200 hover:bg-gray-300 transition-colors disabled:opacity-50"
+              >
+                Next
+              </button>
+            </div>
           </div>
         </div>
         <div className="overflow-x-auto">
@@ -151,7 +153,7 @@ function App() {
             </tbody>
           </table>
         </div>
-        <div className="flex justify-center items-center mt-4">
+        <div className="flex flex-col md:flex justify-center items-center mt-4">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
