@@ -153,7 +153,7 @@ function App() {
             </tbody>
           </table>
         </div>
-        <div className="flex flex-col md:flex justify-center items-center mt-4">
+        <div className="flex flex-col md:flex-row justify-center items-center mt-4">
           <button
             onClick={() => handlePageChange(currentPage - 1)}
             disabled={currentPage === 1}
