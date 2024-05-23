@@ -1,6 +1,6 @@
 # ADMIN DASHBOARD - BOOKS COLLECTION
 
-[GitHub Repository](https://github.com/Krishna4563/nua-assignment)
+[Demo Link](https://book-data-dashboard.vercel.app)
 
 ## About
 
