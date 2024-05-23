@@ -2,6 +2,8 @@
 
 [Demo Link](https://book-data-dashboard.vercel.app)
 
+//The data takes few seconds to be displayed in the app.
+
 ## About
 
 This is an admin dashboard featuring a list of books, where users can view the list of books and sort them accordingly. The job data has been fetched using an external API.
